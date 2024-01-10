@@ -16,8 +16,8 @@ const Home = () => {
         <ProductCard 
         photo="src/assets/images/camera-1.jpeg"
         name="camera"
-        productId="1"
-        stock="3"
+        // productId="1"
+        // stock="3"s
         price="230"
         handler={addToCardhandler}
         />

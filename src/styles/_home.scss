@@ -2,7 +2,7 @@
     padding: 2rem 5rem;
     display: flex;
     flex-direction: column;
-    height:calc(100vh - 4rem);
+    // height:calc(100vh - 4rem);
     width:100%;
 
     > section{
@@ -38,7 +38,12 @@
     height: 25rem;
     padding: 1rem;
     flex:none;
-    @include flex(column, flex-start, center, 4rem);
+    @include flex(column, flex-start, center, 1rem);
+    background: white;
+    transition: all 0.3s;
+    &:hover > div{
+        opacity: 1;
+    }
 
     img{
         @include square(18.75rem - 3rem);
@@ -56,12 +61,20 @@
         left: 0;
         background: #0000006b;
         @include flex;
-
+        opacity: 0;
         button {
             @include flex;
             @include square(3rem);
             border-radius: 100%;
             border:none;
+            background: $color3;
+            color: $color1;
+            font-size: 1rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            &:hover {
+                rotate: 20deg;
+            }
         }
     }
 }
