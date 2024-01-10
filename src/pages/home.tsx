@@ -14,7 +14,7 @@ const Home = () => {
       </h1>
       <main>
         <ProductCard 
-        photo="src/assets/images/camera.jpeg"
+        photo="src/assets/images/camera-1.jpeg"
         name="camera"
         productId="1"
         stock="3"
