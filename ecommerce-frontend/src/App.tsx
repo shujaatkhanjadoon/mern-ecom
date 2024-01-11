@@ -12,6 +12,8 @@ const  Cart = lazy(() => import("./pages/cart"));
 // Admin Routes Importing
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
 const Shipping = lazy(() => import("./pages/shpping"));
+const Orders = lazy(() => import("./pages/orders"));
+const OrderDetails = lazy(() => import("./pages/order-details"));
 const Login = lazy(() => import("./pages/login"));
 const Products = lazy(() => import("./pages/admin/products"));
 const Customers = lazy(() => import("./pages/admin/customers"));
@@ -51,6 +53,8 @@ const App = () => {
         {/* Logged In user */}
           <Route>
             <Route path="/shipping" element={<Shipping />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/order/:id" element={<OrderDetails />} />
           </Route>
         
 
