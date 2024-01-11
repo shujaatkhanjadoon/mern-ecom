@@ -1,12 +1,9 @@
 
-
 export interface newUserRequestBody {
+    _id: string;
     name: string;
     email: string;
     photo: string;
-    role: string;
     gender: string;
-    age: string;
-    _id: string;
     dob: Date;
 }

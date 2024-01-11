@@ -7,17 +7,15 @@ export const newUser = async (
     res: Response, 
     next: NextFunction) => {
     try {
-        const {_id, name, email, photo, gender, role, age, dob} = req.body;
+        const { _id, name, email, photo, gender, dob } = req.body;
 
        const user =  await User.create({
-        _id, 
+        _id,
         name, 
         email, 
         photo, 
-        gender, 
-        role, 
-        age, 
-        dob
+        gender,
+        dob: new Date(dob),
         });
         return (
             res.status(200).json({
@@ -27,6 +25,5 @@ export const newUser = async (
 
     } catch (error) {
         console.log(error);
-        
     }
 }
