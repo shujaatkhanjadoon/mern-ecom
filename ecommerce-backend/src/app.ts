@@ -5,6 +5,6 @@ const app = express();
 
 
 app.listen(port, () => {
-    console.log(`Server is working on http://localhost/${port}`);
+    console.log(`Server is working on http://localhost:${port}`);
     
-})
+});
